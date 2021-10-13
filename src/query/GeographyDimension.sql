@@ -8,9 +8,6 @@ CREATE TABLE [assessment].[GeographyDimension]
 )
 WITH
 (
-    DISTRIBUTION = ROUND_ROBIN,
+    DISTRIBUTION = HASH([M]),
     CLUSTERED COLUMNSTORE INDEX
 )
-
--- TODO
--- Any improvements that can be made here?

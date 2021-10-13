@@ -15,9 +15,7 @@ CREATE TABLE [assessment].[FactVeryLarge]
 )
 WITH
 (
-    DISTRIBUTION = ROUND_ROBIN,
+    DISTRIBUTION = HASH([M, P]),
     CLUSTERED COLUMNSTORE INDEX
 )
 
--- TODO
--- Any improvements that can be made here?
